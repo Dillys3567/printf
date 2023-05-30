@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 			print_char += print;
 		}
 	}
-	print_buffer(buff, index);
+	print_buffer(buff, &index);
 	va_end(ls);
 	return (print_char);
 }
