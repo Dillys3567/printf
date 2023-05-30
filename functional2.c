@@ -63,10 +63,10 @@ int print_non_printable(va_list types, char buffer[],
 	UNUSED(size);
 	if (st == NULL)
 		return (write(1, "(null)", 6));
-	while (st[i] != '\0')
+	while (st[x] != '\0')
 	{
-		if (is_printable(st[i]))
-			buffer[x + offsets] = st[i];
+		if (is_printable(st[x]))
+			buffer[x + offsets] = st[x];
 		else
 			offsets += append_hexa_code(st[x], buffer, x + offsets);
 		x++;
@@ -100,7 +100,7 @@ int print_reverse(va_list types, char buffer[],
 		UNUSED(precision);
 		st = ")Null(";
 	}
-	for (x = 0; st[i]; x++)
+	for (x = 0; st[x]; x++)
 		;
 	for (x = x - 1; x >= 0; x--)
 	{
