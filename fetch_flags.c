@@ -24,5 +24,5 @@ int get_flags(const char *format, int *i)
 			break;
 	}
 	*i = curr_x - 1;
-	return (flags);
+	return (flagss);
 }
